@@ -155,8 +155,8 @@ def main():
                                                            logger=logger)
         last_epoch = start_epoch + 1  # 这个+1  是什么意思？????????????????????????
     else:
-        # 如果没有写权重位置，也会取权重文件夹，查找是否存在之前训练的权重
-        # 如果存在，则加载最后一次的权重文件
+        # 如果没有写权重位置，也会取权重文件夹，查找是否存在之前训练的权重损失
+        # 如果存在，则加载最后一次的权重文件 时间段 设定阿萨德撒
         ckpt_list = glob.glob(
             str(ckpt_dir / '*checkpoint_epoch_*.pth'))  # glob.glob函数  glob.glob(r'c:*.txt')  str函数  将值转换为字符串
         if len(ckpt_list) > 0:
